@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14B17" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="0LR-3K-saC">
+    <dependencies>
+        <deployment defaultVersion="101000" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6245"/>
+    </dependencies>
+    <scenes>
+        <!--Window-->
+        <scene sceneID="2kk-CA-UWV">
+            <objects>
+                <windowController id="0LR-3K-saC" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="MYs-uh-v63">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="1574" y="133" width="480" height="271"/>
+                        <rect key="screenRect" x="1280" y="-229" width="1920" height="1177"/>
+                        <view key="contentView" id="79C-pG-ept">
+                            <rect key="frame" x="0.0" y="0.0" width="480" height="271"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </view>
+                    </window>
+                    <connections>
+                        <segue destination="uqt-XY-Rhe" kind="relationship" relationship="window.shadowedContentViewController" id="pw4-rE-B2R"/>
+                    </connections>
+                </windowController>
+                <customObject id="9CS-DD-0df" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="358" y="279.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kEG-25-uD0">
+            <objects>
+                <userDefaultsController representsSharedInstance="YES" id="oSf-i4-tmd"/>
+                <customObject id="uvx-uI-SqM" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <viewController id="uqt-XY-Rhe" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" id="6xV-Qa-WFb">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="min-q6-twO">
+                                <rect key="frame" x="18" y="242" width="167" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="dddd" id="cKT-Lz-XKc">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    <connections>
+                                        <binding destination="oSf-i4-tmd" name="displayPatternValue1" keyPath="values.ipTextLabel" id="bzl-DC-7KK">
+                                            <dictionary key="options">
+                                                <string key="NSDisplayPattern">%{value1}@</string>
+                                            </dictionary>
+                                        </binding>
+                                    </connections>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H0c-i3-cOn">
+                                <rect key="frame" x="14" y="101" width="92" height="32"/>
+                                <buttonCell key="cell" type="push" title="开始服务" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="PoO-3l-7fF">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="13" name="STHeitiSC-Light"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="serverControl:" target="uqt-XY-Rhe" id="x9J-sm-Ox7"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ydH-1n-jAw">
+                                <rect key="frame" x="18" y="188" width="286" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="NiL-U1-kHc">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="19q-pU-vB8">
+                                <rect key="frame" x="14" y="206" width="66" height="32"/>
+                                <buttonCell key="cell" type="push" title="测试" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fmh-S7-Nwz">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="13" name="STHeitiSC-Light"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="openWebSite:" target="uqt-XY-Rhe" id="kWJ-gW-FEQ"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hJA-lY-MbV">
+                                <rect key="frame" x="14" y="152" width="118" height="32"/>
+                                <buttonCell key="cell" type="push" title="打开文档目录" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ott-U5-d9X">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="13" name="STHeitiSC-Light"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="openFilesFinder:" target="uqt-XY-Rhe" id="vS7-5U-J8L"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lr0-o9-ngk">
+                                <rect key="frame" x="106" y="110" width="131" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="yNo-0b-Uld">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="controlButton" destination="H0c-i3-cOn" id="gw5-gy-WvY"/>
+                        <outlet property="ipTextLabel" destination="min-q6-twO" id="Us8-Yt-mIy"/>
+                        <outlet property="serverPathTextLabel" destination="ydH-1n-jAw" id="nT9-cm-ven"/>
+                        <outlet property="serverStatusLabel" destination="lr0-o9-ngk" id="Taq-I8-vDu"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="358" y="700"/>
+        </scene>
+    </scenes>
+</document>

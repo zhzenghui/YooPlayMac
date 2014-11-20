@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "DDASLLogger.h"
+#import "DDTTYLogger.h"
+
+
 
 @interface AppDelegate ()
 
@@ -16,6 +20,11 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+    
+    [DDLog addLogger:[DDASLLogger sharedInstance]];
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    
+    
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

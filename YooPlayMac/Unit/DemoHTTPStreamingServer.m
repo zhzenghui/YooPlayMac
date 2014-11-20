@@ -28,10 +28,13 @@
   self.httpServer = [[HTTPServer alloc] init];
 	[self.httpServer setType:@"_http._tcp."];
     [self.httpServer setPort:1314];
-	NSString *webPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"web"];
 
+}
 
-	[self.httpServer setDocumentRoot:webPath];
+- (void)setDocumentRoot:(NSString *)webPath {
+    
+    
+    [self.httpServer setDocumentRoot:webPath];
 }
 
 - (void)start {

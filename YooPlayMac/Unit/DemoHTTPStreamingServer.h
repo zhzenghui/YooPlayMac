@@ -9,6 +9,8 @@
 
 + (instancetype)sharedInstance;
 
+- (void)setDocumentRoot:(NSString *)webPath;
+
 - (void)start;
 - (void)stop;
 

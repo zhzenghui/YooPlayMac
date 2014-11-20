@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A0DB415C33874ACEA468F8F6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 687DBF97CE374CC2BA15EF20 /* libPods.a */; };
 		C02CD32B1A1DDA6500829F9D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C02CD32A1A1DDA6500829F9D /* AppDelegate.m */; };
 		C02CD32D1A1DDA6500829F9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C02CD32C1A1DDA6500829F9D /* main.m */; };
 		C02CD3301A1DDA6500829F9D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C02CD32F1A1DDA6500829F9D /* ViewController.m */; };
 		C02CD3321A1DDA6500829F9D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C02CD3311A1DDA6500829F9D /* Images.xcassets */; };
-		C02CD3351A1DDA6500829F9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C02CD3331A1DDA6500829F9D /* Main.storyboard */; };
 		C02CD3411A1DDA6500829F9D /* YooPlayMacTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C02CD3401A1DDA6500829F9D /* YooPlayMacTests.m */; };
-		C02CD34E1A1DE1B900829F9D /* IPDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = C02CD34D1A1DE1B900829F9D /* IPDetector.m */; };
-		C02CD3511A1DEB0600829F9D /* DemoHTTPStreamingServer.m in Sources */ = {isa = PBXBuildFile; fileRef = C02CD3501A1DEB0600829F9D /* DemoHTTPStreamingServer.m */; };
+		F4CC2D7D1A1E258B00F13D31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4CC2D7C1A1E258B00F13D31 /* Main.storyboard */; };
+		F4CC2DB51A1E28DD00F13D31 /* DemoHTTPStreamingServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CC2DB21A1E28DD00F13D31 /* DemoHTTPStreamingServer.m */; };
+		F4CC2DB61A1E28DD00F13D31 /* IPDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CC2DB41A1E28DD00F13D31 /* IPDetector.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6731B4FEAD35447B98C4082F /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		687DBF97CE374CC2BA15EF20 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C02CD3241A1DDA6500829F9D /* YooPlayMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YooPlayMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C02CD3281A1DDA6500829F9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C02CD3291A1DDA6500829F9D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -36,14 +39,14 @@
 		C02CD32E1A1DDA6500829F9D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		C02CD32F1A1DDA6500829F9D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C02CD3311A1DDA6500829F9D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		C02CD3341A1DDA6500829F9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C02CD33A1A1DDA6500829F9D /* YooPlayMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YooPlayMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C02CD33F1A1DDA6500829F9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C02CD3401A1DDA6500829F9D /* YooPlayMacTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YooPlayMacTests.m; sourceTree = "<group>"; };
-		C02CD34C1A1DE1B900829F9D /* IPDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPDetector.h; sourceTree = "<group>"; };
-		C02CD34D1A1DE1B900829F9D /* IPDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPDetector.m; sourceTree = "<group>"; };
-		C02CD34F1A1DEB0600829F9D /* DemoHTTPStreamingServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoHTTPStreamingServer.h; sourceTree = "<group>"; };
-		C02CD3501A1DEB0600829F9D /* DemoHTTPStreamingServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoHTTPStreamingServer.m; sourceTree = "<group>"; };
+		F4CC2D7C1A1E258B00F13D31 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F4CC2DB11A1E28DD00F13D31 /* DemoHTTPStreamingServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoHTTPStreamingServer.h; sourceTree = "<group>"; };
+		F4CC2DB21A1E28DD00F13D31 /* DemoHTTPStreamingServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoHTTPStreamingServer.m; sourceTree = "<group>"; };
+		F4CC2DB31A1E28DD00F13D31 /* IPDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPDetector.h; sourceTree = "<group>"; };
+		F4CC2DB41A1E28DD00F13D31 /* IPDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPDetector.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0DB415C33874ACEA468F8F6 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,12 +68,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8262A8D8E9AC48009FA20423 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				687DBF97CE374CC2BA15EF20 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C02CD31B1A1DDA6500829F9D = {
 			isa = PBXGroup;
 			children = (
 				C02CD3261A1DDA6500829F9D /* YooPlayMac */,
 				C02CD33D1A1DDA6500829F9D /* YooPlayMacTests */,
 				C02CD3251A1DDA6500829F9D /* Products */,
+				6731B4FEAD35447B98C4082F /* Pods.xcconfig */,
+				8262A8D8E9AC48009FA20423 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,16 +99,13 @@
 		C02CD3261A1DDA6500829F9D /* YooPlayMac */ = {
 			isa = PBXGroup;
 			children = (
+				F4CC2DB01A1E28DD00F13D31 /* Unit */,
 				C02CD3291A1DDA6500829F9D /* AppDelegate.h */,
 				C02CD32A1A1DDA6500829F9D /* AppDelegate.m */,
-				C02CD34C1A1DE1B900829F9D /* IPDetector.h */,
-				C02CD34D1A1DE1B900829F9D /* IPDetector.m */,
-				C02CD34F1A1DEB0600829F9D /* DemoHTTPStreamingServer.h */,
-				C02CD3501A1DEB0600829F9D /* DemoHTTPStreamingServer.m */,
 				C02CD32E1A1DDA6500829F9D /* ViewController.h */,
 				C02CD32F1A1DDA6500829F9D /* ViewController.m */,
+				F4CC2D7C1A1E258B00F13D31 /* Main.storyboard */,
 				C02CD3311A1DDA6500829F9D /* Images.xcassets */,
-				C02CD3331A1DDA6500829F9D /* Main.storyboard */,
 				C02CD3271A1DDA6500829F9D /* Supporting Files */,
 			);
 			path = YooPlayMac;
@@ -126,6 +137,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F4CC2DB01A1E28DD00F13D31 /* Unit */ = {
+			isa = PBXGroup;
+			children = (
+				F4CC2DB11A1E28DD00F13D31 /* DemoHTTPStreamingServer.h */,
+				F4CC2DB21A1E28DD00F13D31 /* DemoHTTPStreamingServer.m */,
+				F4CC2DB31A1E28DD00F13D31 /* IPDetector.h */,
+				F4CC2DB41A1E28DD00F13D31 /* IPDetector.m */,
+			);
+			path = Unit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -133,9 +155,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C02CD3441A1DDA6500829F9D /* Build configuration list for PBXNativeTarget "YooPlayMac" */;
 			buildPhases = (
+				A7A64ACDF0EE4C7181BC6E7D /* Check Pods Manifest.lock */,
 				C02CD3201A1DDA6500829F9D /* Sources */,
 				C02CD3211A1DDA6500829F9D /* Frameworks */,
 				C02CD3221A1DDA6500829F9D /* Resources */,
+				09330233F4304A75802D152F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,7 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C02CD3321A1DDA6500829F9D /* Images.xcassets in Resources */,
-				C02CD3351A1DDA6500829F9D /* Main.storyboard in Resources */,
+				F4CC2D7D1A1E258B00F13D31 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,15 +244,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		09330233F4304A75802D152F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7A64ACDF0EE4C7181BC6E7D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C02CD3201A1DDA6500829F9D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4CC2DB61A1E28DD00F13D31 /* IPDetector.m in Sources */,
 				C02CD3301A1DDA6500829F9D /* ViewController.m in Sources */,
 				C02CD32D1A1DDA6500829F9D /* main.m in Sources */,
-				C02CD34E1A1DE1B900829F9D /* IPDetector.m in Sources */,
-				C02CD3511A1DEB0600829F9D /* DemoHTTPStreamingServer.m in Sources */,
+				F4CC2DB51A1E28DD00F13D31 /* DemoHTTPStreamingServer.m in Sources */,
 				C02CD32B1A1DDA6500829F9D /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,17 +307,6 @@
 			targetProxy = C02CD33B1A1DDA6500829F9D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		C02CD3331A1DDA6500829F9D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C02CD3341A1DDA6500829F9D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C02CD3421A1DDA6500829F9D /* Debug */ = {
@@ -341,6 +387,7 @@
 		};
 		C02CD3451A1DDA6500829F9D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6731B4FEAD35447B98C4082F /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -353,6 +400,7 @@
 		};
 		C02CD3461A1DDA6500829F9D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6731B4FEAD35447B98C4082F /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
