@@ -1,0 +1,435 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C02CD32B1A1DDA6500829F9D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C02CD32A1A1DDA6500829F9D /* AppDelegate.m */; };
+		C02CD32D1A1DDA6500829F9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C02CD32C1A1DDA6500829F9D /* main.m */; };
+		C02CD3301A1DDA6500829F9D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C02CD32F1A1DDA6500829F9D /* ViewController.m */; };
+		C02CD3321A1DDA6500829F9D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C02CD3311A1DDA6500829F9D /* Images.xcassets */; };
+		C02CD3351A1DDA6500829F9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C02CD3331A1DDA6500829F9D /* Main.storyboard */; };
+		C02CD3411A1DDA6500829F9D /* YooPlayMacTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C02CD3401A1DDA6500829F9D /* YooPlayMacTests.m */; };
+		C02CD34E1A1DE1B900829F9D /* IPDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = C02CD34D1A1DE1B900829F9D /* IPDetector.m */; };
+		C02CD3511A1DEB0600829F9D /* DemoHTTPStreamingServer.m in Sources */ = {isa = PBXBuildFile; fileRef = C02CD3501A1DEB0600829F9D /* DemoHTTPStreamingServer.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C02CD33B1A1DDA6500829F9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C02CD31C1A1DDA6500829F9D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C02CD3231A1DDA6500829F9D;
+			remoteInfo = YooPlayMac;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C02CD3241A1DDA6500829F9D /* YooPlayMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YooPlayMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C02CD3281A1DDA6500829F9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C02CD3291A1DDA6500829F9D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C02CD32A1A1DDA6500829F9D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C02CD32C1A1DDA6500829F9D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C02CD32E1A1DDA6500829F9D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C02CD32F1A1DDA6500829F9D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C02CD3311A1DDA6500829F9D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C02CD3341A1DDA6500829F9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C02CD33A1A1DDA6500829F9D /* YooPlayMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YooPlayMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C02CD33F1A1DDA6500829F9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C02CD3401A1DDA6500829F9D /* YooPlayMacTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YooPlayMacTests.m; sourceTree = "<group>"; };
+		C02CD34C1A1DE1B900829F9D /* IPDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPDetector.h; sourceTree = "<group>"; };
+		C02CD34D1A1DE1B900829F9D /* IPDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPDetector.m; sourceTree = "<group>"; };
+		C02CD34F1A1DEB0600829F9D /* DemoHTTPStreamingServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoHTTPStreamingServer.h; sourceTree = "<group>"; };
+		C02CD3501A1DEB0600829F9D /* DemoHTTPStreamingServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoHTTPStreamingServer.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C02CD3211A1DDA6500829F9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C02CD3371A1DDA6500829F9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C02CD31B1A1DDA6500829F9D = {
+			isa = PBXGroup;
+			children = (
+				C02CD3261A1DDA6500829F9D /* YooPlayMac */,
+				C02CD33D1A1DDA6500829F9D /* YooPlayMacTests */,
+				C02CD3251A1DDA6500829F9D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C02CD3251A1DDA6500829F9D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C02CD3241A1DDA6500829F9D /* YooPlayMac.app */,
+				C02CD33A1A1DDA6500829F9D /* YooPlayMacTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C02CD3261A1DDA6500829F9D /* YooPlayMac */ = {
+			isa = PBXGroup;
+			children = (
+				C02CD3291A1DDA6500829F9D /* AppDelegate.h */,
+				C02CD32A1A1DDA6500829F9D /* AppDelegate.m */,
+				C02CD34C1A1DE1B900829F9D /* IPDetector.h */,
+				C02CD34D1A1DE1B900829F9D /* IPDetector.m */,
+				C02CD34F1A1DEB0600829F9D /* DemoHTTPStreamingServer.h */,
+				C02CD3501A1DEB0600829F9D /* DemoHTTPStreamingServer.m */,
+				C02CD32E1A1DDA6500829F9D /* ViewController.h */,
+				C02CD32F1A1DDA6500829F9D /* ViewController.m */,
+				C02CD3311A1DDA6500829F9D /* Images.xcassets */,
+				C02CD3331A1DDA6500829F9D /* Main.storyboard */,
+				C02CD3271A1DDA6500829F9D /* Supporting Files */,
+			);
+			path = YooPlayMac;
+			sourceTree = "<group>";
+		};
+		C02CD3271A1DDA6500829F9D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C02CD3281A1DDA6500829F9D /* Info.plist */,
+				C02CD32C1A1DDA6500829F9D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C02CD33D1A1DDA6500829F9D /* YooPlayMacTests */ = {
+			isa = PBXGroup;
+			children = (
+				C02CD3401A1DDA6500829F9D /* YooPlayMacTests.m */,
+				C02CD33E1A1DDA6500829F9D /* Supporting Files */,
+			);
+			path = YooPlayMacTests;
+			sourceTree = "<group>";
+		};
+		C02CD33E1A1DDA6500829F9D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C02CD33F1A1DDA6500829F9D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C02CD3231A1DDA6500829F9D /* YooPlayMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C02CD3441A1DDA6500829F9D /* Build configuration list for PBXNativeTarget "YooPlayMac" */;
+			buildPhases = (
+				C02CD3201A1DDA6500829F9D /* Sources */,
+				C02CD3211A1DDA6500829F9D /* Frameworks */,
+				C02CD3221A1DDA6500829F9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YooPlayMac;
+			productName = YooPlayMac;
+			productReference = C02CD3241A1DDA6500829F9D /* YooPlayMac.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C02CD3391A1DDA6500829F9D /* YooPlayMacTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C02CD3471A1DDA6500829F9D /* Build configuration list for PBXNativeTarget "YooPlayMacTests" */;
+			buildPhases = (
+				C02CD3361A1DDA6500829F9D /* Sources */,
+				C02CD3371A1DDA6500829F9D /* Frameworks */,
+				C02CD3381A1DDA6500829F9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C02CD33C1A1DDA6500829F9D /* PBXTargetDependency */,
+			);
+			name = YooPlayMacTests;
+			productName = YooPlayMacTests;
+			productReference = C02CD33A1A1DDA6500829F9D /* YooPlayMacTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C02CD31C1A1DDA6500829F9D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = zeng;
+				TargetAttributes = {
+					C02CD3231A1DDA6500829F9D = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					C02CD3391A1DDA6500829F9D = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = C02CD3231A1DDA6500829F9D;
+					};
+				};
+			};
+			buildConfigurationList = C02CD31F1A1DDA6500829F9D /* Build configuration list for PBXProject "YooPlayMac" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C02CD31B1A1DDA6500829F9D;
+			productRefGroup = C02CD3251A1DDA6500829F9D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C02CD3231A1DDA6500829F9D /* YooPlayMac */,
+				C02CD3391A1DDA6500829F9D /* YooPlayMacTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C02CD3221A1DDA6500829F9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C02CD3321A1DDA6500829F9D /* Images.xcassets in Resources */,
+				C02CD3351A1DDA6500829F9D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C02CD3381A1DDA6500829F9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C02CD3201A1DDA6500829F9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C02CD3301A1DDA6500829F9D /* ViewController.m in Sources */,
+				C02CD32D1A1DDA6500829F9D /* main.m in Sources */,
+				C02CD34E1A1DE1B900829F9D /* IPDetector.m in Sources */,
+				C02CD3511A1DEB0600829F9D /* DemoHTTPStreamingServer.m in Sources */,
+				C02CD32B1A1DDA6500829F9D /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C02CD3361A1DDA6500829F9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C02CD3411A1DDA6500829F9D /* YooPlayMacTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C02CD33C1A1DDA6500829F9D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C02CD3231A1DDA6500829F9D /* YooPlayMac */;
+			targetProxy = C02CD33B1A1DDA6500829F9D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C02CD3331A1DDA6500829F9D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C02CD3341A1DDA6500829F9D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C02CD3421A1DDA6500829F9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C02CD3431A1DDA6500829F9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C02CD3451A1DDA6500829F9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = YooPlayMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C02CD3461A1DDA6500829F9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = YooPlayMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C02CD3481A1DDA6500829F9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = YooPlayMacTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YooPlayMac.app/Contents/MacOS/YooPlayMac";
+			};
+			name = Debug;
+		};
+		C02CD3491A1DDA6500829F9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = YooPlayMacTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YooPlayMac.app/Contents/MacOS/YooPlayMac";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C02CD31F1A1DDA6500829F9D /* Build configuration list for PBXProject "YooPlayMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C02CD3421A1DDA6500829F9D /* Debug */,
+				C02CD3431A1DDA6500829F9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C02CD3441A1DDA6500829F9D /* Build configuration list for PBXNativeTarget "YooPlayMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C02CD3451A1DDA6500829F9D /* Debug */,
+				C02CD3461A1DDA6500829F9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C02CD3471A1DDA6500829F9D /* Build configuration list for PBXNativeTarget "YooPlayMacTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C02CD3481A1DDA6500829F9D /* Debug */,
+				C02CD3491A1DDA6500829F9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C02CD31C1A1DDA6500829F9D /* Project object */;
+}
