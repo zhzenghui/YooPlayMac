@@ -11,9 +11,9 @@
 #import "DemoHTTPStreamingServer.h"
 
 
+#define KServerPath @"serverPath"
+
 @implementation ViewController
-
-
 
 - (void)getIP {
     [IPDetector getLANIPAddressWithCompletion:^(NSString *IPAddress) {
@@ -25,14 +25,14 @@
         //    index.html
         //    allfile.json
         //    allfile.html
-        [self buildPath];
+        [self buildPathFile];
     }];
     
 }
 
 - (void)setSerVerPath {
-    self.serverPathTextLabel.stringValue = @"/Users/zenghui/百度云同步盘";
-    serverPath = self.serverPathTextLabel.stringValue;
+    self.serverPathTextLabel.stringValue = serverPath;
+//    serverPath = self.serverPathTextLabel.stringValue;
     NSString *webPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"web"];
     
     webPath = serverPath;
@@ -62,9 +62,36 @@
 }
 
 
-
-
 - (void)buildPath {
+    
+    NSFileManager *filemgr;
+    NSString *pathString;
+    filemgr = [NSFileManager defaultManager];
+    
+    pathString = [NSHomeDirectory() stringByAppendingPathComponent:@"Yoo同步盘"];
+    
+    NSLog(@"%@", pathString);
+    serverPath = pathString;
+    
+    [[NSUserDefaults standardUserDefaults] setObject:serverPath forKey:KServerPath];
+    
+    
+    
+    NSURL *url = [[NSURL alloc] initFileURLWithPath:serverPath];
+    
+    
+
+    NSError *error;
+    bool isSuccess =  [filemgr createDirectoryAtURL:url withIntermediateDirectories:YES attributes:nil error:&error];
+    
+    if ( ! isSuccess) {
+        NSLog(@"创建同步盘文件夹错误");
+    }
+    
+
+}
+
+- (void)buildPathFile {
     
     NSFileManager *filemgr;
     NSString *pathString;
@@ -104,6 +131,7 @@
     
 //    保存html
     NSString *allFileHtml = [NSString stringWithFormat:@"%@/allFile.html", serverPath];
+    NSString *indexHtml = [NSString stringWithFormat:@"%@/index.html", serverPath];
     NSString *allFilePlist = [NSString stringWithFormat:@"%@/allFile.plist", serverPath];
 
     NSMutableString *htmlString = [NSMutableString string];
@@ -128,6 +156,31 @@
     
     [files writeToFile:allFilePlist atomically:YES];
     
+//    生成 index.html 文件
+    
+
+    htmlString = nil;
+    htmlString = [NSMutableString string];
+    
+    [htmlString appendFormat:@"<html>"];
+    [htmlString appendFormat:@"<head>"];
+    [htmlString appendFormat:@"<meta charset=\"utf-8\">"];
+    [htmlString appendFormat:@"<title>Yoo的同步盘~</title>"];
+    [htmlString appendFormat:@"</head>"];
+    [htmlString appendFormat:@"<body>"];
+    
+    [htmlString appendFormat:@"<h1> %@</h1><br />", @"启动成功"];
+    [htmlString appendFormat:@"<a href=\"/allFile.html\"> %@</a><br />", @"查看所有文件"];
+
+    
+    [htmlString appendFormat:@"</body>"];
+    [htmlString appendFormat:@"</html>"];
+
+    
+    
+    
+    [htmlString writeToFile:indexHtml atomically:YES encoding:NSUTF8StringEncoding error:nil];
+
 }
 
 
@@ -163,8 +216,15 @@
 }
 
 
+
+
+
 - (void)loadView {
     [super loadView];
+    
+//    生成用户目录
+    [self buildPath];
+
 
 //    获取本地ip
     [self getIP];
