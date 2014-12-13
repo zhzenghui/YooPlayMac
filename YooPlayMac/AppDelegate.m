@@ -31,10 +31,32 @@
     // Insert code here to tear down your application
 }
 
-
-- (void)application:(NSApplication *)sender openFiles:(NSArray *)filenames {
-    
-}
+//- (void)application:(NSApplication *)application didUpdateUserActivity:(NSUserActivity *)userActivity {
+//    
+//    [userActivity addUserInfoEntriesFromDictionary:@{
+//                                                     @"handoffVersion": @"2.0",
+//                                                     }];
+//}
+//
+//
+//- (BOOL)application:(NSApplication *)application willContinueUserActivityWithType:(NSString *)userActivityType {
+//    
+//    
+//    if ( [userActivityType isEqual:@"com.yooyoi.yooplay"]) {
+//
+//        
+//        return YES;
+//    }
+//    return NO;
+//}
+//
+//
+//
+//- (BOOL)application:(NSApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray *))restorationHandler {
+//    
+//    
+//    return YES;
+//}
 
 
 

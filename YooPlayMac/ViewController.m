@@ -15,11 +15,46 @@
 
 @implementation ViewController
 
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+
+    NSLog( @"%@", object);
+    
+}
+
+
+- (void)directoryDidChange:(DirectoryWatcher *)folderWatcher
+{
+    
+    isChangeIndex  = !isChangeIndex;
+
+
+    if ( isChangeIndex ) {
+        NSLog(@"%@", @"索引 改变");
+        [self buildPathFile];
+    }
+
+}
+
+
+
+- (void)obServerServerPath {
+    self.docWatcher = [DirectoryWatcher watchFolderWithPath:serverPath delegate:self];
+}
+
+
 - (void)getIP {
     [IPDetector getLANIPAddressWithCompletion:^(NSString *IPAddress) {
         NSLog(@"%@", IPAddress);
-        self.ipTextLabel.stringValue = IPAddress;
 
+
+        if (IPAddress) {
+            self.ipTextLabel.stringValue = IPAddress;
+            NSString *ipString = [IPAddress componentsSeparatedByString:@"."][3] ;
+            self.ipSubTextLabel.stringValue = ipString;
+            
+        }
         
         //    生产索引目录
         //    index.html
@@ -31,14 +66,15 @@
 }
 
 - (void)setSerVerPath {
-    
-    [self stopServer];
-    
-    
     self.serverPathTextLabel.stringValue = serverPath;
-    NSString *webPath = serverPath;
+//    serverPath = self.serverPathTextLabel.stringValue;
+    NSString *webPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"web"];
+    
+    webPath = serverPath;
     [[DemoHTTPStreamingServer sharedInstance] setDocumentRoot:webPath];
     
+    
+    [self obServerServerPath];
 
 }
 
@@ -46,7 +82,6 @@
     isStart = YES;
     self.serverStatusLabel.stringValue = @"正在运行...";
     self.serverStatusLabel.textColor = [NSColor greenColor];
-
     
     [[DemoHTTPStreamingServer sharedInstance] start];
     
@@ -97,6 +132,8 @@
 
 - (void)buildPathFile {
     
+    
+
     NSFileManager *filemgr;
     NSString *pathString;
     
@@ -114,8 +151,20 @@
     
     NSString *filename ;
     while (filename = [direnum nextObject]) {
-        if ( ![[filename substringToIndex:1] isEqualToString:@"."] && ![[filename pathExtension] isEqualTo:@""]
-            && ![[filename pathExtension] isEqualTo:@"jpg"]) { //[[filename pathExtension] isEqualTo:@"jpg"]
+        if (  [[[filename pathExtension] lowercaseString] isEqualTo:@"wmv"]
+            || [[[filename pathExtension] lowercaseString] isEqualTo:@"avi"]
+            || [[[filename pathExtension] lowercaseString]  isEqualTo:@"rmvb"]
+            || [[[filename pathExtension] lowercaseString]  isEqualTo:@"rm"]
+            || [[[filename pathExtension] lowercaseString]  isEqualTo:@"asf"]
+            || [[[filename pathExtension] lowercaseString]  isEqualTo:@"mpg"]
+            || [[[filename pathExtension] lowercaseString]  isEqualTo:@"mpeg"]
+            || [[[filename pathExtension] lowercaseString]  isEqualTo:@"mp4"]
+            || [[[filename pathExtension] lowercaseString]  isEqualTo:@"mkv"]
+            || [[[filename pathExtension] lowercaseString]  isEqualTo:@"m4v"]
+            || [[[filename pathExtension] lowercaseString]  isEqualTo:@"ts"]
+            || [[[filename pathExtension] lowercaseString]  isEqualTo:@"xvid"]
+            || [[[filename pathExtension] lowercaseString]  isEqualTo:@"dvix"]
+            ) { //[[filename pathExtension] isEqualTo:@"jpg"]
             
             [files addObject: filename];
 //            文件名
@@ -185,6 +234,11 @@
     
     [htmlString writeToFile:indexHtml atomically:YES encoding:NSUTF8StringEncoding error:nil];
 
+    
+    
+    isChangeIndex  = YES;
+
+
 }
 
 
@@ -219,68 +273,75 @@
     
 }
 
-- (IBAction)setServerPath:(id)sender {
-    
 
-    
-    NSOpenPanel* openDlg = [NSOpenPanel openPanel];
-    
-    [openDlg setCanChooseFiles:FALSE];
-    [openDlg setCanChooseDirectories:TRUE];
-    [openDlg setAllowsMultipleSelection:FALSE];
-    [openDlg setAllowsOtherFileTypes:FALSE];
-    
-    if ([openDlg runModal] == NSOKButton)
-    {
-        
-        
-        NSString* fileNameOpened = [[[openDlg URLs] objectAtIndex:0] path];
-        [self.serverPathTextLabel setStringValue:fileNameOpened];
-        
-        serverPath = fileNameOpened;
-        [[NSUserDefaults standardUserDefaults] setObject:serverPath forKey:KServerPath];
+#pragma mark -  handoff acitiy
 
-        [self reSetServerSetting];
-        
-        
-    }
-}
+//
+//// set actiivy
+//- (void)initActivity {
+//
+//    
+//    NSUserActivity *userActivity = [[NSUserActivity alloc] initWithActivityType:@"com.yooyoi.yooplay"];
+//    userActivity.title = @"server url";
+//    userActivity.userInfo = @{ @"message": @"192.168.1.999" };
+//    
+//    [userActivity becomeCurrent];
+//    [userActivity invalidate];
+//    
+//    userActivity.delegate = self;
+//    userActivity.needsSave = YES;
+//
+//
+//    _userActivity = userActivity;
+//    
+//    [self setUserActivity:_userActivity];
+//
+//    
+//    
+//}
+//
+//- (void)updateUserActivityState:(NSUserActivity *)userActivity  {
+//    [userActivity setTitle: @"new server url"];
+//    [userActivity addUserInfoEntriesFromDictionary: @{ @"server": @"192.11.1.1" }];
+//}
+//
+//- (void)userActivity:(NSUserActivity *)userActivity didReceiveInputStream:(NSInputStream *)inputStream outputStream:(NSOutputStream *)outputStream {
+//    
+//}
+//
+//- (void)userActivityWasContinued:(NSUserActivity *)userActivity {
+//    
+//}
+//
+//- (void)userActivityWillSave:(NSUserActivity *)userActivity {
+//    
+//}
 
-
-
-- (void)reSetServerSetting {
-    
-    
-    //  设置服务器的 根目录
-    [self setSerVerPath];
-    
-//    生成目录文件
-    [self buildPathFile];
-    
-    //    启动服务
-    [self startServer];
-    
-}
+#pragma mark - view cycle
 
 - (void)loadView {
     [super loadView];
     
 //    生成用户目录
-    
-    serverPath = [[NSUserDefaults standardUserDefaults] objectForKey:KServerPath];
-
-    if ( ! serverPath   ) {
-        [self buildPath];
-    }
+    [self buildPath];
 
 
 //    获取本地ip
     [self getIP];
     
+//  设置服务器的 根目录
+    [self setSerVerPath];
+
+    
+//    启动服务
+    [self startServer];
 
 
-    [self reSetServerSetting];
 
+//    [self initActivity];
+    
+
+    
 }
 
 - (void)setRepresentedObject:(id)representedObject {

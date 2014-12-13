@@ -13,6 +13,7 @@
 		C02CD3301A1DDA6500829F9D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C02CD32F1A1DDA6500829F9D /* ViewController.m */; };
 		C02CD3321A1DDA6500829F9D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C02CD3311A1DDA6500829F9D /* Images.xcassets */; };
 		C02CD3411A1DDA6500829F9D /* YooPlayMacTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C02CD3401A1DDA6500829F9D /* YooPlayMacTests.m */; };
+		C09E1FB91A37316300522E47 /* DirectoryWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = C09E1FB81A37316300522E47 /* DirectoryWatcher.m */; };
 		F4CC2D7D1A1E258B00F13D31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4CC2D7C1A1E258B00F13D31 /* Main.storyboard */; };
 		F4CC2DB51A1E28DD00F13D31 /* DemoHTTPStreamingServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CC2DB21A1E28DD00F13D31 /* DemoHTTPStreamingServer.m */; };
 		F4CC2DB61A1E28DD00F13D31 /* IPDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CC2DB41A1E28DD00F13D31 /* IPDetector.m */; };
@@ -42,6 +43,8 @@
 		C02CD33A1A1DDA6500829F9D /* YooPlayMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YooPlayMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C02CD33F1A1DDA6500829F9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C02CD3401A1DDA6500829F9D /* YooPlayMacTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YooPlayMacTests.m; sourceTree = "<group>"; };
+		C09E1FB71A37316300522E47 /* DirectoryWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectoryWatcher.h; sourceTree = "<group>"; };
+		C09E1FB81A37316300522E47 /* DirectoryWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectoryWatcher.m; sourceTree = "<group>"; };
 		F4CC2D7C1A1E258B00F13D31 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F4CC2DB11A1E28DD00F13D31 /* DemoHTTPStreamingServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoHTTPStreamingServer.h; sourceTree = "<group>"; };
 		F4CC2DB21A1E28DD00F13D31 /* DemoHTTPStreamingServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoHTTPStreamingServer.m; sourceTree = "<group>"; };
@@ -142,6 +145,8 @@
 			children = (
 				F4CC2DB11A1E28DD00F13D31 /* DemoHTTPStreamingServer.h */,
 				F4CC2DB21A1E28DD00F13D31 /* DemoHTTPStreamingServer.m */,
+				C09E1FB71A37316300522E47 /* DirectoryWatcher.h */,
+				C09E1FB81A37316300522E47 /* DirectoryWatcher.m */,
 				F4CC2DB31A1E28DD00F13D31 /* IPDetector.h */,
 				F4CC2DB41A1E28DD00F13D31 /* IPDetector.m */,
 			);
@@ -284,6 +289,7 @@
 			files = (
 				F4CC2DB61A1E28DD00F13D31 /* IPDetector.m in Sources */,
 				C02CD3301A1DDA6500829F9D /* ViewController.m in Sources */,
+				C09E1FB91A37316300522E47 /* DirectoryWatcher.m in Sources */,
 				C02CD32D1A1DDA6500829F9D /* main.m in Sources */,
 				F4CC2DB51A1E28DD00F13D31 /* DemoHTTPStreamingServer.m in Sources */,
 				C02CD32B1A1DDA6500829F9D /* AppDelegate.m in Sources */,
