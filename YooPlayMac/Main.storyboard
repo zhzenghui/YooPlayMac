@@ -80,16 +80,6 @@
                                     <action selector="openWebSite:" target="uqt-XY-Rhe" id="kWJ-gW-FEQ"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hJA-lY-MbV">
-                                <rect key="frame" x="14" y="152" width="118" height="32"/>
-                                <buttonCell key="cell" type="push" title="打开文档目录" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ott-U5-d9X">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" size="13" name="STHeitiSC-Light"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="openFilesFinder:" target="uqt-XY-Rhe" id="vS7-5U-J8L"/>
-                                </connections>
-                            </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lr0-o9-ngk">
                                 <rect key="frame" x="106" y="110" width="131" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="yNo-0b-Uld">
@@ -98,6 +88,26 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dat-Ia-XF7">
+                                <rect key="frame" x="14" y="151" width="98" height="32"/>
+                                <buttonCell key="cell" type="push" title="设置文件夹" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gAs-80-GBY">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="13" name="STHeitiSC-Light"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="setServerPath:" target="uqt-XY-Rhe" id="foN-8H-Hkb"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hJA-lY-MbV">
+                                <rect key="frame" x="112" y="151" width="118" height="32"/>
+                                <buttonCell key="cell" type="push" title="打开文档目录" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ott-U5-d9X">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="13" name="STHeitiSC-Light"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="openFilesFinder:" target="uqt-XY-Rhe" id="vS7-5U-J8L"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>

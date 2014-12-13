@@ -31,18 +31,22 @@
 }
 
 - (void)setSerVerPath {
-    self.serverPathTextLabel.stringValue = serverPath;
-//    serverPath = self.serverPathTextLabel.stringValue;
-    NSString *webPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"web"];
     
-    webPath = serverPath;
+    [self stopServer];
+    
+    
+    self.serverPathTextLabel.stringValue = serverPath;
+    NSString *webPath = serverPath;
     [[DemoHTTPStreamingServer sharedInstance] setDocumentRoot:webPath];
+    
+
 }
 
 - (void)startServer {
     isStart = YES;
     self.serverStatusLabel.stringValue = @"正在运行...";
     self.serverStatusLabel.textColor = [NSColor greenColor];
+
     
     [[DemoHTTPStreamingServer sharedInstance] start];
     
@@ -215,28 +219,67 @@
     
 }
 
+- (IBAction)setServerPath:(id)sender {
+    
+
+    
+    NSOpenPanel* openDlg = [NSOpenPanel openPanel];
+    
+    [openDlg setCanChooseFiles:FALSE];
+    [openDlg setCanChooseDirectories:TRUE];
+    [openDlg setAllowsMultipleSelection:FALSE];
+    [openDlg setAllowsOtherFileTypes:FALSE];
+    
+    if ([openDlg runModal] == NSOKButton)
+    {
+        
+        
+        NSString* fileNameOpened = [[[openDlg URLs] objectAtIndex:0] path];
+        [self.serverPathTextLabel setStringValue:fileNameOpened];
+        
+        serverPath = fileNameOpened;
+        [[NSUserDefaults standardUserDefaults] setObject:serverPath forKey:KServerPath];
+
+        [self reSetServerSetting];
+        
+        
+    }
+}
 
 
 
+- (void)reSetServerSetting {
+    
+    
+    //  设置服务器的 根目录
+    [self setSerVerPath];
+    
+//    生成目录文件
+    [self buildPathFile];
+    
+    //    启动服务
+    [self startServer];
+    
+}
 
 - (void)loadView {
     [super loadView];
     
 //    生成用户目录
-    [self buildPath];
+    
+    serverPath = [[NSUserDefaults standardUserDefaults] objectForKey:KServerPath];
+
+    if ( ! serverPath   ) {
+        [self buildPath];
+    }
 
 
 //    获取本地ip
     [self getIP];
     
-//  设置服务器的 根目录
-    [self setSerVerPath];
-
-    
-//    启动服务
-    [self startServer];
 
 
+    [self reSetServerSetting];
 
 }
 

@@ -31,4 +31,11 @@
     // Insert code here to tear down your application
 }
 
+
+- (void)application:(NSApplication *)sender openFiles:(NSArray *)filenames {
+    
+}
+
+
+
 @end

@@ -6,9 +6,6 @@
 #import "DemoHTTPStreamingServer.h"
 #import "HTTPServer.h"
 
-@interface DemoHTTPStreamingServer()
-@property (nonatomic, strong) HTTPServer *httpServer;
-@end
 
 @implementation DemoHTTPStreamingServer
 
@@ -42,6 +39,9 @@
   NSError *error;
 	if([self.httpServer start:&error])
 	{
+        NSLog(@"%@",  self.httpServer.connectionClass);
+        
+//        [self.httpServer setConnectionClass:1000];
 		NSLog(@"Started HTTP Server on port %hu", [self.httpServer listeningPort]);
 	}
 	else
@@ -53,5 +53,7 @@
 - (void)stop {
   [self.httpServer stop];
 }
+
+
 
 @end

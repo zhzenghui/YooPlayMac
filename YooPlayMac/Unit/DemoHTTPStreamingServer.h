@@ -4,8 +4,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "HTTPServer.h"
+
 
 @interface DemoHTTPStreamingServer : NSObject
+
+@property (nonatomic, strong) HTTPServer *httpServer;
 
 + (instancetype)sharedInstance;
 

@@ -24,6 +24,7 @@
 - (IBAction)serverControl:(id)sender;
 - (IBAction)openWebSite:(id)sender;
 - (IBAction)openFilesFinder:(id)sender;
+- (IBAction)setServerPath:(id)sender;
 
 
 
